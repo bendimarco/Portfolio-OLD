@@ -115,7 +115,7 @@ function App() {
               A web app for ___. Designed and Implemented the Frontend using Figma and React." 
               ProjectDisplay={<></>} 
               ProjectGit="https://github.com/adit-bala/juicer-blog-1.0"
-              ProjectLink=""    
+              ProjectLink="https://adit-bala.github.io/juicer-blog-frontend/"    
               />
             <ProjectSection
               // ref = {WebpointRef}
