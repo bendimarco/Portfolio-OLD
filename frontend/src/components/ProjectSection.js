@@ -30,7 +30,10 @@ const TextContainer = styled.div`
     margin-left: 50px;
     // background-color: #f00;
     width: 40%;
-    ,argin-top: -60px;
+    @media (max-width: 1180px) {
+        margin-left: 100px;
+        width: 34%;
+    }
 `
 
 const ProjectIdDiv = styled.div`
@@ -39,7 +42,9 @@ const ProjectIdDiv = styled.div`
     width: 2px;
     height: 14px;
     background: -webkit-linear-gradient(15deg, ${props => props.Color1}, ${props => props.Color2});
-    // margin-top: 60px;
+    @media (max-width: 1180px) {
+        margin-left: 60px;
+    }
 `
 
 const ProjectId = styled.h2`
@@ -78,6 +83,9 @@ const PhoneImg= styled.img`
     // &:hover {
     //     transform: scale(100.01);
     // }
+    @media (max-width: 1180px) {
+        width: 96%;
+    }
 `
 
 const ViewMoreButton = styled.a`
@@ -198,7 +206,7 @@ const Placeholder2 = styled.p`
     color: ${props => props.theme === "light" ? themes.light.constructionTextColor: themes.dark.constructionTextColor};
 `
 
-export default function ProjectSection ({theme, Color1, Color2, ProjectType, ProjectTitle, ProjectDesc, ProjectDisplay, ProjectGit, ProjectLink}) {
+export default function ProjectSection ({theme, Color1, Color2, ProjectType, ProjectTitle, ProjectDesc, ProjectDisplay,  ProjectDisplayDark, ProjectGit, ProjectLink}) {
 
     // const sectionRef = useRef(null)
 
@@ -244,18 +252,18 @@ export default function ProjectSection ({theme, Color1, Color2, ProjectType, Pro
             <GitHubIconHolder><GitBtn theme={theme} target="_blank" href={ProjectGit} ><i class="fab fa-github-alt"></i></GitBtn></GitHubIconHolder>
             <LinkIconHolder><LinkBtn theme={theme} target="_blank" href={ProjectLink} ><i class="fas fa-external-link-alt"></i></LinkBtn></LinkIconHolder>
             <ButtonHolder className="fadeInProject" theme={theme}>
-                <ViewMoreButton theme={theme} target="_blank" href="https://google.com" >View More Details </ViewMoreButton>
+                <ViewMoreButton theme={theme} target="_blank" href={ProjectLink} >View More Details </ViewMoreButton>
                 <Arrow1 theme={theme}/>
                 <Arrow2 theme={theme}/>
                 <Arrow3 theme={theme}/>
             </ButtonHolder>
             </TextContainer>
             <PhoneContainer>
-                    <PhoneImg src={theme === "light" ? LightPhone : DarkPhone}/>
-                    <PlaceholderContainer>
+                    <PhoneImg src={theme === "light" ? ProjectDisplay : ProjectDisplayDark }/>
+                    {/* <PlaceholderContainer>
                         <Placeholder1>🚧</Placeholder1>
                         <Placeholder2 theme={theme}>Under Consturction</Placeholder2>
-                    </PlaceholderContainer>
+                    </PlaceholderContainer> */}
                 </PhoneContainer>
             </ContentContainer>
         </Container>

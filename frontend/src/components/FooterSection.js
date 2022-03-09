@@ -62,7 +62,7 @@ export default function ProjectSection ({ theme }) {
             <ContentContainer>
                 <DotLine2 theme={theme}/>
                 <TextContainer>
-                    <CopyrightText theme={theme}>© Copyright 2021 Benjamin DiMarco</CopyrightText>
+                    <CopyrightText theme={theme}>© Copyright 2022 Benjamin DiMarco</CopyrightText>
                     <MadeWithText theme={theme}>Made with️ React and &nbsp;❤️</MadeWithText>
                 </TextContainer>
             </ContentContainer>

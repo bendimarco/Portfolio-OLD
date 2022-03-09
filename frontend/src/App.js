@@ -11,6 +11,11 @@ import styled from "styled-components"
 import BarLoader from "react-spinners/BarLoader";
 import themes from "./themes"
 
+import BlogImg from "../src/images/Projects/BlogProjectImg.svg"
+import BlogImgDark from "../src/images/Projects/BlogProjectImgDark.svg"
+import WebPointImg from "../src/images/Projects/WebPointProjectImg.svg"
+import WebPointImgDark from "../src/images/Projects/WebPointProjectImgDark.svg"
+
 // const Content = styled.div`
 //   font-size: 4rem;
 //   position: absolute;
@@ -112,8 +117,9 @@ function App() {
               ProjectType="Personal Project" 
               ProjectTitle="The Juicer Blog"  
               ProjectDesc="
-              A web app for ___. Designed and Implemented the Frontend using Figma and React." 
-              ProjectDisplay={<></>} 
+              A web app to capture my many thoughts, and the thoughts of my much more thoughtful friend, Adit. Designed and Implemented the Frontend using Figma and React." 
+              ProjectDisplay={BlogImg}  
+              ProjectDisplayDark={BlogImgDark}  
               ProjectGit="https://github.com/adit-bala/juicer-blog-1.0"
               ProjectLink="https://adit-bala.github.io/juicer-blog-frontend/"    
               />
@@ -124,6 +130,8 @@ function App() {
               Color2="#34BDFF" 
               ProjectType="Volunteer Organization" 
               ProjectTitle="WebPoint"  
+              ProjectDisplay={WebPointImg}  
+              ProjectDisplayDark={WebPointImgDark}  
               // ProjectDesc="Webpoint is a volunteer organization that delivers local 
               // businesses professional websites and provides students practical experience 
               // in web development. Our team is comprised of over 14 voluenteers, all 

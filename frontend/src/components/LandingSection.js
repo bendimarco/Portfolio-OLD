@@ -531,7 +531,7 @@ export default function LandingSection ({ theme, setTheme }) {
                         <ButtonText>
                             <Button theme={theme} href={"#"}>View My Projects <Emoji>🚚</Emoji></Button> 
                             <AndSymbol>&</AndSymbol>
-                            <Button theme={theme} href={"#"}>Get In Touch <Emoji>📮</Emoji></Button>
+                            <Button theme={theme} href="mailto:bendimarco20@gmail.com" target="_blank">Get In Touch <Emoji>📮</Emoji></Button>
                         </ButtonText>
                         <QuoteText theme={theme}>“The greatest lesson that I learned in all of this is that you have to start. Start now, start here, start small and keep it simple.”  <i>- Jack Dorsey</i></QuoteText>
                 </TextContainer>

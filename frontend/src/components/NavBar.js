@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import themes from "../themes"
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Container = styled.div`
     width: 100%;
@@ -90,9 +91,9 @@ export default function NavBar ({theme, setTheme}) {
                 <Name><NameBold>Ben</NameBold> DiMarco<Emoji></Emoji></Name>
                 <NavLinkContainer>
                     <NavLinkList>
-                        <NavLink><NavBtn theme={theme} href={"#"}>About Me</NavBtn></NavLink>
+                        {/* <NavLink><NavBtn theme={theme} href={"#"}>About Me</NavBtn></NavLink>
                         <NavLink><NavBtn theme={theme} href={"#"}>My Projects</NavBtn></NavLink>
-                        <NavLink><NavBtn theme={theme} href={"#"}>Get In Touch</NavBtn></NavLink>
+                        <NavLink><NavBtn theme={theme} href={"#"}>Get In Touch</NavBtn></NavLink> */}
                         <NavLinkDarkMode onClick={toggleTheme}><NavBtn theme={theme} ><i class="fas fa-moon"></i></NavBtn></NavLinkDarkMode>
                     </NavLinkList>
                 </NavLinkContainer>

@@ -39,6 +39,14 @@ const TextContainer = styled.div`
     margin-top: 0px;
     margin-left: 50px;
     width: 50%;
+    @media (max-width: 1180px) {
+        width: 50%;
+        margin-left: 100px;
+    }
+    @media (max-width: 960px) {
+        margin-left: 190px;
+        width: 44%;
+    }
 `
 
 const AboutIdDiv = styled.div`
@@ -48,6 +56,9 @@ const AboutIdDiv = styled.div`
     height: 14px;
     margin-top: 60px;
     background-color: ${props => props.theme === "light" ? themes.light.aboutIdColor : themes.dark.aboutIdColor};
+    @media (max-width: 1180px) {
+        margin-left: 70px;
+    }
 `
 
 const AboutId = styled.h2`
@@ -72,25 +83,18 @@ const AboutText = styled.p`
 const PhoneContainer = styled.div`
     width: 50%;
     margin-top: -40px;
-    // background-color: #0f0;
     z-index: 7;
+    @media (max-width: 1180px) {
+        margin-top: -20px;
+    }
+    @media (max-width: 960px) {
+        margin-right: 80px;
+        margin-top: 60px;
+    }
 `
 
 const PhoneContentContainer = styled.div`
     z-index: 9;
-`
-
-
-const ZeldaImg = styled.img`
-    position: absolute;
-    top: 274px;
-    right: 102px;
-    width: 166px;
-    transition: 0.2s;
-    &:hover {
-        transform: scale(1.05);
-        opacity: 0.8;
-    }
 `
 
 // const ZeldaImg = styled.img`
@@ -117,18 +121,6 @@ const ZeldaImg = styled.img`
 //     }
 // // `
 
-const TylerImg = styled.img`
-    position: absolute;
-    top: 327px;
-    right: 267px;
-    width: 140px;
-    transition: 0.2s;
-    &:hover {
-        transform: scale(1.04);
-        opacity: 0.8;
-    }
-// `
-
 const KevinImg = styled.img`
     position: absolute;
     top: 60px;
@@ -138,6 +130,11 @@ const KevinImg = styled.img`
     &:hover {
         transform: scale(1.04);
         opacity: 0.8;
+    }
+    @media (max-width: 1180px) {
+        width: 280px;
+        right: 130px;
+        top: 74px;
     }
 `
 
@@ -163,7 +160,29 @@ const PhotosImg = styled.img`
         transform: scale(1.06);
         opacity: 0.8;
     }
+    @media (max-width: 1180px) {
+        width: 130px;
+        top: 188px;
+        right: 280px;
+    }
 `
+
+const TylerImg = styled.img`
+    position: absolute;
+    top: 327px;
+    right: 267px;
+    width: 140px;
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.04);
+        opacity: 0.8;
+    }
+    @media (max-width: 1180px) {
+        top: 312px;
+        width: 130px;
+        right: 280px;
+    }
+// `
 
 const TwitchImg = styled.img`
     position: absolute;
@@ -174,6 +193,11 @@ const TwitchImg = styled.img`
     &:hover {
         transform: scale(1.08);
         opacity: 0.8;
+    }
+    @media (max-width: 1180px) {
+        width: 82px;
+        right: 204px;
+        top: 190px;
     }
 `
 
@@ -187,7 +211,30 @@ const SpotifyImg = styled.img`
         transform: scale(1.08);
         opacity: 0.8;
     }
+    @media (max-width: 1180px) {
+        width: 82px;
+        right: 130px;
+        top: 190px;
+    }
 `
+
+const ZeldaImg = styled.img`
+    position: absolute;
+    top: 274px;
+    right: 102px;
+    width: 166px;
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    @media (max-width: 1180px) {
+        width: 150px;
+        right: 132px;
+        top: 270px;
+    }
+`
+
 
 const SwiftImg = styled.img`
     position: absolute;
@@ -198,6 +245,11 @@ const SwiftImg = styled.img`
     &:hover {
         transform: scale(1.1);
         opacity: 0.8;
+    }
+    @media (max-width: 1180px) {
+        width: 56px;
+        top: 424px;
+        right: 130px;
     }
 `
 
@@ -211,6 +263,11 @@ const ReactAppImg = styled.img`
         transform: scale(1.1);
         opacity: 0.8;
     }
+    @media (max-width: 1180px) {
+        width: 49px;
+        top: 427px;
+        right: 181px;
+    }
 `
 
 const JSImg = styled.img`
@@ -223,10 +280,19 @@ const JSImg = styled.img`
         transform: scale(1.1);
         opacity: 0.8;
     }
+    @media (max-width: 1180px) {
+        width: 56px;
+        top: 424px;
+        right: 226px;
+    }
 `
 
 const PhoneImg= styled.img`
     margin-left: 50px;
+    @media (max-width: 1180px) {
+        width: 80%;
+        margin-left: 30px;
+    }
 `
 
 export default function AboutSection ({ theme }) {
@@ -311,7 +377,7 @@ export default function AboutSection ({ theme }) {
                         <a href="https://open.spotify.com/artist/7wbkl3zgDZEoZer357mVIw" target="_blank">
                             <KevinImg src={Kevin}></KevinImg>
                         </a>
-                        <a href="https://www.instagram.com/dimarco.photo/" target="_blank">
+                        <a href="https://www.instagram.com/bendimar.co/" target="_blank">
                             <PhotosImg src={theme === "light" ? Photos : PhotosDark}></PhotosImg>
                             {/* src={theme === "light" ? Photos : PhotosDark} */}
                         </a>
