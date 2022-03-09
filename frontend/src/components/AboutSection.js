@@ -49,6 +49,10 @@ const TextContainer = styled.div`
     }
 `
 
+const TextLink = styled.a`
+    color: ${props => props.theme === "light" ? themes.light.pTextColor : themes.dark.pTextColor};
+`
+
 const AboutIdDiv = styled.div`
     position: absolute;
     left: -1px;
@@ -349,19 +353,11 @@ export default function AboutSection ({ theme }) {
         <AboutId className="fadeIn" theme={theme}>Who am I ?</AboutId>
         <AboutHeader className="fadeIn">A Little About Me ✌️</AboutHeader>
         <AboutText className="fadeIn" theme={theme}>
-            Hi! My name is Ben and I enjoy creating things that live on the internet. My 
-            interest in web development started back in 2012 when I decided to try 
-            editing custom Tumblr themes — turns out hacking together a custom reblog 
-            button taught me a lot about HTML & CSS!
+            Hi! My name is Ben. I am currently a freshman at the University of Maryland studying Computer Science and Economics. I love listening to podcasts (my favorites are the All In Podcast, the Lex Fridman Podcast, and This Week in Startups), listening to music (Kanye, Jaden Smith, Boy Pablo, Still Woozy), photography, Twitch, and creating websites like this!
         </AboutText>
         <AboutText className="fadeIn" theme={theme}>
             {/*className="fadeIn"</TextContainer>*/}
-            Fast-forward to today, and I've had the privilege of working at an advertising 
-            agency, a start-up, a huge corporation, and a student-led design studio. My 
-            main focus these days is building accessible, inclusive products and digital 
-            experiences at Upstatement for a variety of clients. My main focus these days 
-            is building accessible, inclusive products and digital experiences at 
-            Upstatement for a variety of clients.
+            I am super interested in all things technology and innovation. I am always up for a long conversation about web development, iOS development, UI/UX design, DeFi, venture capital, synthetic biology, or climate tech. More information on what im currently working on can be found <TextLink href="https://www.linkedin.com/in/bendimarco/" target="_blank">here</TextLink>.
             </AboutText>
         </TextContainer>
         <PhoneContainer>
