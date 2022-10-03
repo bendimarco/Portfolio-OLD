@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.d0287e7b.chunk.css",
-    "main.js": "/Portfolio/static/js/main.c9e31614.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.c9e31614.chunk.js.map",
+    "main.js": "/Portfolio/static/js/main.84fdea84.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.84fdea84.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.850b4050.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.850b4050.js.map",
     "static/js/2.611d2dce.chunk.js": "/Portfolio/static/js/2.611d2dce.chunk.js",
@@ -15,7 +15,7 @@
     "static/media/allin.3657bcb3.png": "/Portfolio/static/media/allin.3657bcb3.png",
     "static/media/appstore.14704b71.svg": "/Portfolio/static/media/appstore.14704b71.svg",
     "static/media/blog.658d8456.svg": "/Portfolio/static/media/blog.658d8456.svg",
-    "static/media/blog_dark.07bd820a.svg": "/Portfolio/static/media/blog_dark.07bd820a.svg",
+    "static/media/blog_dark.1359ce1e.svg": "/Portfolio/static/media/blog_dark.1359ce1e.svg",
     "static/media/books-bg-dark.2de8fa12.svg": "/Portfolio/static/media/books-bg-dark.2de8fa12.svg",
     "static/media/books-bg.2a4271f4.svg": "/Portfolio/static/media/books-bg.2a4271f4.svg",
     "static/media/books.5d51a40b.svg": "/Portfolio/static/media/books.5d51a40b.svg",
@@ -40,7 +40,7 @@
     "static/media/linchpin.c17c520b.png": "/Portfolio/static/media/linchpin.c17c520b.png",
     "static/media/mail.4531df21.svg": "/Portfolio/static/media/mail.4531df21.svg",
     "static/media/memento.d4b387a3.svg": "/Portfolio/static/media/memento.d4b387a3.svg",
-    "static/media/memento_dark.0ddf5921.svg": "/Portfolio/static/media/memento_dark.0ddf5921.svg",
+    "static/media/memento_dark.2db80fea.svg": "/Portfolio/static/media/memento_dark.2db80fea.svg",
     "static/media/news.f1eb4fd1.svg": "/Portfolio/static/media/news.f1eb4fd1.svg",
     "static/media/newsdark.aa6053e9.svg": "/Portfolio/static/media/newsdark.aa6053e9.svg",
     "static/media/notes.2c46bf2e.svg": "/Portfolio/static/media/notes.2c46bf2e.svg",
@@ -66,6 +66,6 @@
     "static/js/runtime-main.850b4050.js",
     "static/js/2.611d2dce.chunk.js",
     "static/css/main.d0287e7b.chunk.css",
-    "static/js/main.c9e31614.chunk.js"
+    "static/js/main.84fdea84.chunk.js"
   ]
 }
