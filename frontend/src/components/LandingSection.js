@@ -7,6 +7,8 @@ import { useIntersection } from "react-use"
 
 import NavBar from "./NavBar"
 import Scroll from "./Scroll"
+import Books from './Interactions/Books'
+import Podcasts from './Interactions/Podcasts'
 
 // import BlankPhone from "../images/blank-phone-vertical.svg"
 import LightPhone from "../images/lightphone.svg"
@@ -41,7 +43,12 @@ const Container = styled.div`
         height: 600px;
     }
     @media (max-width: 800px) {
-        height: 1060px;
+        // height: auto;
+        height: 1160px;
+    }
+    @media (max-width: 512px) {
+        // height: auto;
+        height: 1000px;
     }
 `
 
@@ -59,7 +66,10 @@ const ContentContainer = styled.div`
     }
     @media (max-width: 800px) {
         display: inline-block;
-        width: 660px;
+        width: 90%;
+        max-width: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 `
 
@@ -70,7 +80,7 @@ const DotLine1 = styled.div`
     background-image: ${props => props.theme === "light" ? themes.light.dottedLineColor : themes.dark.dottedLineColor};
     background-size: 1px 12px;
     background-repeat: repeat-y;
-    height: 2190px;
+    height: 2672px;
     @media (max-width: 1180px) {
         display: none;
     }
@@ -108,7 +118,11 @@ const TextContainer = styled.div`
     }
     @media (max-width: 800px) {
         margin-top: 10px;
-        margin-left: 94px;
+        width: 90%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        max-width: 500px;
+        text-align: center;
      }
 `
 
@@ -125,7 +139,7 @@ const DescText = styled.h2`
     font-weight: 300;
     width: 500px;
     margin-top: 16px;
-    line-height: 32px;
+    line-height: 36px;
     @media (max-width: 1180px) {
         font-size: 20px;
         line-height: 28px;
@@ -134,6 +148,10 @@ const DescText = styled.h2`
     @media (max-width: 960px) {
         width: 420px;
         font-size: 20px;
+    }
+    @media (max-width: 960px) {
+        width: 100%;
+        line-height: 32px;
     }
 `
 
@@ -145,7 +163,7 @@ const DescIt = styled.span`
     font-style: italic;
 `
 const QuoteText = styled.h3`
-    margin-top: 40px;
+    margin-top: 20px;
     color: ${props => props.theme === "light" ? themes.light.quoteTextColor : themes.dark.quoteTextColor};
     font-size: 16px;
     font-weight: 300;
@@ -158,13 +176,16 @@ const QuoteText = styled.h3`
         width: 420px;
         font-size: 14px;
     }
+    @media (max-width: 960px) {
+        width: 100%;
+    }
 `
 
 const ButtonText= styled.p`
     font-size: 16px;
     font-weight: 300;
     width: 700px;
-    margin-top: 24px;
+    margin-top: 40px;
     @media (max-width: 1180px) {
         position: absolute;
         top: 270px;
@@ -174,6 +195,17 @@ const ButtonText= styled.p`
     @media (max-width: 960px) {
         width: 500px;
         font-size: 14px;
+    }
+    @media (max-width: 960px) {
+        width: 100%;
+        margin-top: 40px;
+    }
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-top: 0px;
+    }
+    @media (max-width: 516px) {
+        display: none;
     }
 `
 
@@ -213,16 +245,22 @@ const PhoneContainer = styled.div`
     }
     @media (max-width: 800px) {
         position: absolute;
-        width: 500px;
-        left: 60px;
-        top: 340px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-top: 80px;
     }
-
+    @media (max-width: 516px) {
+        margin-top: 20px;
+    }
 `
 
 const PhoneImg= styled.img`
     margin-left: 50px;
     width: 100%;
+    @media (max-width: 800px) {
+        margin: 0;
+    }
 `
 
 // const FingerprintImg = styled(animated.img)`
@@ -271,6 +309,11 @@ const ScrollHolder = styled.div`
 const PhoneContentContainer = styled.div`
     width: 700px;
     background: #f00;
+    @media (max-width: 800px) {
+        width: 100%;
+        height: auto;
+        background: blue;
+    }
 `
 
 const PhoneDockImg= styled.img`
@@ -288,9 +331,9 @@ const PhoneDockImg= styled.img`
        right: 96px;
     }
     @media (max-width: 800px) {
-        width: 316px;
-        left: 142px;
-        top: 480px;
+        width: 66%;
+        top: 69%; //nice
+        right: 17%;
     }
 `
 
@@ -314,9 +357,9 @@ const GitHubImg = styled.img`
         right: 270px;
      }
     @media (max-width: 800px) {
-        top: 493px;
-        width: 61px;
-        right: 276px;
+        width: 13%;
+        left: 22%;
+        top: 71%;
     }
 `
 
@@ -338,10 +381,10 @@ const DribbbleImg = styled.img`
     @media (max-width: 960px) {
         right: 218px;
      }
-    @media (max-width: 800px) {
-        top: 493px;
-        width: 61px;
-        right: 206px;
+     @media (max-width: 800px) {
+        width: 13%;
+        left: 36%;
+        top: 71%;
     }
 `
 
@@ -375,10 +418,10 @@ const MailImg = styled.img`
     @media (max-width: 960px) {
         right: 164px;
      }
-    @media (max-width: 800px) {
-        top: 493px;
-        width: 61px;
-        right: 136px;
+     @media (max-width: 800px) {
+        width: 13%;
+        left: 50%;
+        top: 71%;
     }
 `
 
@@ -395,10 +438,10 @@ const LeafImg = styled.img`
     @media (max-width: 960px) {
         right: 162px;
      }
-    @media (max-width: 800px) {
-        top: 230px;
-        right: 136px;
-        width: 130px;
+     @media (max-width: 800px) {
+        width: 30%;
+        right: 34%;
+        top: 28%;
     }
 `
 
@@ -420,10 +463,10 @@ const PodcastImg = styled.img`
     @media (max-width: 960px) {
         right: 114px;
      }
-    @media (max-width: 800px) {
-        top: 174px;
-        width: 61px;
-        right: 64px;
+     @media (max-width: 800px) {
+        width: 13%;
+        left: 64%;
+        top: 14%;
     }
 `
 
@@ -446,9 +489,9 @@ const BookImg = styled.img`
         right: 114px;
     }
     @media (max-width: 800px) {
-        top: 102px;
-        width: 61px;
-        right: 64px;
+        width: 13%;
+        left: 64%;
+        top: 24%;
     }
 `
 
@@ -474,6 +517,11 @@ const NotesImg = styled.img`
         top: 493px;
         width: 61px;
         right: 64px;
+    }
+    @media (max-width: 800px) {
+        width: 13%;
+        left: 64%;
+        top: 71%;
     }
 `
 
@@ -516,6 +564,9 @@ const IribeImg = styled.img`
 
 export default function LandingSection ({ theme, setTheme }) {
 
+    const [books, setBooks] = useState(false);
+    const [pods, setPods] = useState(false);
+
 
     return (
         <Container theme={theme}>
@@ -525,19 +576,21 @@ export default function LandingSection ({ theme, setTheme }) {
                 <DotLine2 theme={theme}/>
                 <TextContainer>
                     <HelloText>Hello</HelloText>
-                    <DescText>My name is <DescIt>Ben</DescIt>, and I am a freshman studying 
+                    <DescText>My name is <DescIt>Ben</DescIt>, and I am a sophomore studying 
                         <DescIt> Computer Science </DescIt> at the 
                         <DescBold> University of Maryland. </DescBold></DescText>
+                        <QuoteText theme={theme}>“The greatest lesson that I learned in all of this is that you have to start. Start now, start here, start small and keep it simple.”  <i>- Jack Dorsey</i></QuoteText>
                         <ButtonText>
-                            <Button theme={theme} href={"#"}>View My Projects <Emoji>🚚</Emoji></Button> 
-                            <AndSymbol>&</AndSymbol>
+                            {/* <Button theme={theme} href={"#"}>View My Projects <Emoji>🚚</Emoji></Button> 
+                            <AndSymbol>&</AndSymbol> */}
                             <Button theme={theme} href="mailto:bendimarco20@gmail.com" target="_blank">Get In Touch <Emoji>📮</Emoji></Button>
                         </ButtonText>
-                        <QuoteText theme={theme}>“The greatest lesson that I learned in all of this is that you have to start. Start now, start here, start small and keep it simple.”  <i>- Jack Dorsey</i></QuoteText>
                 </TextContainer>
                 <PhoneContainer>
                     <PhoneImg src={theme === "light" ? LightPhone : DarkPhone}/>
                         <PhoneContentContainer>
+                            {books ? <Books theme={theme} setBooks={setBooks} /> : <></>}
+                            {pods ? <Podcasts theme={theme} setPods={setPods}/> : <></>}
                             <PhoneDockImg src={theme === "light" ? LightDock : DarkDock} />
                             <a href="https://github.com/bendimarco" target="_blank">
                                 <GitHubImg src={GitHub}></GitHubImg>
@@ -552,9 +605,11 @@ export default function LandingSection ({ theme, setTheme }) {
                                 <MailImg src={Mail}></MailImg>
                             </a>
                             <LeafImg src={theme === "light" ? LightLeaf : DarkLeaf}></LeafImg>
-                            <PodcastImg src={Podcast}></PodcastImg>
-                            <BookImg src={Book}></BookImg>
-                            <NotesImg src={theme === "light" ? News : NewsDark}></NotesImg>
+                            <PodcastImg onClick={() => setPods(true)} src={Podcast}></PodcastImg>
+                            <BookImg onClick={() => setBooks(true)} src={Book}></BookImg>
+                            <a href="https://www.apple.com/apple-news/" target="_blank">
+                                <NotesImg src={theme === "light" ? News : NewsDark}></NotesImg>
+                            </a>
                             {/* <HealthImg src={Notes}></HealthImg> */}
                         </PhoneContentContainer>
                         {/* <ProgressCircleHolder>

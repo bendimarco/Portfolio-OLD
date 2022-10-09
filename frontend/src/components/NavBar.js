@@ -24,7 +24,8 @@ const ContentContainer = styled.div`
         width: 780px;
     }
     @media (max-width: 800px) {
-        width: 480px;
+        width: 80%;
+        
     }
 `
 
@@ -33,6 +34,9 @@ const Name = styled.h4`
     font-weight: 300;
     font-style: italic;
     width: 100px;
+    @media (max-width: 800px) {
+        margin-left: 0;
+    }
 `
 
 const NameBold = styled.span`
@@ -43,6 +47,9 @@ const Emoji = styled.span`
     font-style: normal;
     margin-left: 6px;
     font-size: 16px;
+    @media (max-width: 800px) {
+
+    }
 `
 
 const NavLinkContainer = styled.div`
@@ -60,14 +67,14 @@ const NavLinkList = styled.ul`
 
 const NavLink = styled.li`
     margin-left: 40px;
-    @media (max-width: 800px) {
-        display: none;
-    }
     
 `
 
 const NavLinkDarkMode = styled.li`
     margin-left: 40px;
+    @media (max-width: 800px) {
+      
+    }
 `
 
 const NavBtn = styled.a`

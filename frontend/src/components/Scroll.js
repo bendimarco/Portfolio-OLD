@@ -7,27 +7,27 @@ const AnimateWheel = (theme) => keyframes`
     from {
         margin-top: 15px;
         opacity: 0.7;
-        border: 1px solid ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
-        background-color: ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
+        border: 1px solid ${theme === "light" ? themes.light.scrollColor1 : themes.dark.scrollColor1};
+        background-color: ${theme === "light" ? themes.light.scrollColor2 : themes.dark.scrollColor2};
       }
 
       60% {
         margin-top: 15px;
         opacity: 0.7;
-        background-color: ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
-        border: 1px solid ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
+        background-color: ${theme === "light" ? themes.light.scrollColor1 : themes.dark.scrollColor1};
+        border: 1px solid ${theme === "light" ? themes.light.scrollColor2 : themes.dark.scrollColor2};
       }
 
       62% {
-        background-color: ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
-        border: 1px solid ${theme === "light" ? themes.light.scrollDim1 : themes.dark.scrollDim1};
+        background-color: ${theme === "light" ? themes.light.scrollColor1 : themes.dark.scrollColor1};
+        border: 1px solid ${theme === "light" ? themes.light.scrollColor2 : themes.dark.scrollColor2};
       }
       
       66% {
         margin-top: 15px;
         opacity: 0.9;
-        background-color: ${theme === "light" ? themes.light.scrollDim2 : themes.dark.scrollDim2};
-        border: 1px solid ${theme === "light" ? themes.light.scrollDim3 : themes.dark.scrollDim3};
+        background-color: ${theme === "light" ? themes.light.scrollColor1 : themes.dark.scrollColor1};
+        border: 1px solid ${theme === "light" ? themes.light.scrollColor2 : themes.dark.scrollColor2};
       }
 
       68% {

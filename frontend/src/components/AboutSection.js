@@ -8,7 +8,7 @@ import LightPhone from "../images/lightphone.svg"
 import DarkPhone from "../images/darkphone.svg"
 import Zelda from "../images/AboutPhone/irb.png"
 import Tyler from "../images/AboutPhone/chamath.png"
-import Kevin from "../images/AboutPhone/boypablo.png"
+import Kevin from "../images/AboutPhone/kevin.png"
 import Photos from "../images/AboutPhone/photos2.svg"
 import PhotosDark from "../images/AboutPhone/photosdark.svg"
 import Twitch from "../images/AboutPhone/twitch.svg"
@@ -24,6 +24,10 @@ const Container = styled.div`
     font-family: 'Lato', sans-serif;
     color: ${props => props.theme === "light" ? themes.light.mainTextColor : themes.dark.mainTextColor};
     padding-top: 20px;
+    @media (max-width: 800px) {
+        display: inline-block;
+        height: auto;
+    }
 `
 
 const ContentContainer = styled.div`
@@ -33,10 +37,25 @@ const ContentContainer = styled.div`
     margin-left: 50%;
     transform: translateX(-50%);
     display: flex;
+    @media (max-width: 800px) {
+        display: inline-block;
+    }
+    @media (max-width: 800px) {
+        width: 100%;
+        height: 1080px;
+        max-width: 500px;
+    }
+    @media (max-width: 640px) {
+        margin-top: 20px;
+        height: 1180px;
+    }
+    @media (max-width: 460px) {
+        height: 1080px;
+    }
 `
 
 const TextContainer = styled.div`
-    margin-top: 0px;
+    margin-top: 60px;
     margin-left: 50px;
     width: 50%;
     @media (max-width: 1180px) {
@@ -47,21 +66,34 @@ const TextContainer = styled.div`
         margin-left: 190px;
         width: 44%;
     }
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    @media (max-width: 640px) {
+        width: 80%;
+    }
 `
 
 const TextLink = styled.a`
+    text-decoration: none;
+    font-weight: 400;
     color: ${props => props.theme === "light" ? themes.light.pTextColor : themes.dark.pTextColor};
 `
 
 const AboutIdDiv = styled.div`
     position: absolute;
-    left: -1px;
+    left: -0.5px;
     width: 2px;
     height: 14px;
-    margin-top: 60px;
+    margin-top: 0px;
     background-color: ${props => props.theme === "light" ? themes.light.aboutIdColor : themes.dark.aboutIdColor};
     @media (max-width: 1180px) {
         margin-left: 70px;
+    }
+    @media (max-width: 540px) {
+        display: none;
     }
 `
 
@@ -95,35 +127,21 @@ const PhoneContainer = styled.div`
         margin-right: 80px;
         margin-top: 60px;
     }
+    @media (max-width: 800px) {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-top: 20px;
+    }
+    @media (max-width: 640px) {
+        margin-top: 20px;
+    }
 `
 
 const PhoneContentContainer = styled.div`
     z-index: 9;
 `
-
-// const ZeldaImg = styled.img`
-//     position: absolute;
-//     top: 276px;
-//     right: 100px;
-//     width: 167px;
-//     transition: 0.2s;
-//     &:hover {
-//         transform: scale(1.05);
-//         opacity: 0.8;
-//     }
-// `
-
-// const TylerImg = styled.img`
-//     position: absolute;
-//     top: 320px;
-//     right: 266px;
-//     width: 140px;
-//     transition: 0.2s;
-//     &:hover {
-//         transform: scale(1.04);
-//         opacity: 0.8;
-//     }
-// // `
 
 const KevinImg = styled.img`
     position: absolute;
@@ -138,21 +156,19 @@ const KevinImg = styled.img`
     @media (max-width: 1180px) {
         width: 280px;
         right: 130px;
-        top: 74px;
+        top: 70px;
+    }
+    @media (max-width: 960px) {
+        top: 142px;
+        right: 190px;
+        width: 250px;
+    }
+    @media (max-width: 800px) {
+        top: 10.5%;
+        right: 15%;
+        width: 70%;
     }
 `
-
-// const KevinImg = styled.img`
-//     position: absolute;
-//     top: 64px;
-//     right: 100px;
-//     width: 306px;
-//     transition: 0.2s;
-//     &:hover {
-//         transform: scale(1.04);
-//         opacity: 0.8;
-//     }
-// `
 
 const PhotosImg = styled.img`
     position: absolute;
@@ -166,8 +182,18 @@ const PhotosImg = styled.img`
     }
     @media (max-width: 1180px) {
         width: 130px;
-        top: 188px;
+        top: 184px;
         right: 280px;
+    }
+    @media (max-width: 960px) {
+        top: 250px;
+        right: 326px;
+        width: 112px;
+    }
+    @media (max-width: 800px) {
+        top: 31.5%;
+        right: 53%;
+        width: 32%;
     }
 `
 
@@ -182,11 +208,21 @@ const TylerImg = styled.img`
         opacity: 0.8;
     }
     @media (max-width: 1180px) {
-        top: 312px;
+        top: 308px;
         width: 130px;
         right: 280px;
     }
-// `
+    @media (max-width: 960px) {
+        top: 356px;
+        right: 326px;
+        width: 112px;
+    }
+    @media (max-width: 800px) {
+        top: 53.5%;
+        right: 53%;
+        width: 32%;
+    }
+`
 
 const TwitchImg = styled.img`
     position: absolute;
@@ -201,7 +237,17 @@ const TwitchImg = styled.img`
     @media (max-width: 1180px) {
         width: 82px;
         right: 204px;
-        top: 190px;
+        top: 186px;
+    }
+    @media (max-width: 960px) {
+        top: 248px;
+        right: 256px;
+        width: 70px;
+    }
+    @media (max-width: 800px) {
+        top: 31.5%;
+        right: 33%;
+        width: 20%;
     }
 `
 
@@ -218,7 +264,17 @@ const SpotifyImg = styled.img`
     @media (max-width: 1180px) {
         width: 82px;
         right: 130px;
-        top: 190px;
+        top: 186px;
+    }
+    @media (max-width: 960px) {
+        top: 248px;
+        right: 192px;
+        width: 70px;
+    }
+    @media (max-width: 800px) {
+        top: 31.5%;
+        right: 15%;
+        width: 20%;
     }
 `
 
@@ -235,12 +291,22 @@ const ZeldaImg = styled.img`
     @media (max-width: 1180px) {
         width: 150px;
         right: 132px;
-        top: 270px;
+        top: 266px;
+    }
+    @media (max-width: 960px) {
+        top: 318px;
+        right: 194px;
+        width: 130px;
+    }
+    @media (max-width: 800px) {
+        top: 45.5%;
+        right: 16%;
+        width: 37%;
     }
 `
 
 
-const SwiftImg = styled.img`
+const JSImg = styled.img`
     position: absolute;
     top: 444px;
     right: 95px;
@@ -252,8 +318,18 @@ const SwiftImg = styled.img`
     }
     @media (max-width: 1180px) {
         width: 56px;
-        top: 424px;
+        top: 420px;
         right: 130px;
+    }
+    @media (max-width: 960px) {
+        top: 450px;
+        right: 190px;
+        width: 48px;
+    }
+    @media (max-width: 800px) {
+        top: 72.5%;
+        right: 15%;
+        width: 14%;
     }
 `
 
@@ -269,12 +345,22 @@ const ReactAppImg = styled.img`
     }
     @media (max-width: 1180px) {
         width: 49px;
-        top: 427px;
+        top: 423px;
         right: 181px;
+    }
+    @media (max-width: 960px) {
+        top: 453px;
+        right: 237px;
+        width: 42px;
+    }
+    @media (max-width: 800px) {
+        top: 73.3%;
+        right: 28%;
+        width: 12%;
     }
 `
 
-const JSImg = styled.img`
+const SwiftImg = styled.img`
     position: absolute;
     top: 444px;
     right: 202px;
@@ -286,8 +372,18 @@ const JSImg = styled.img`
     }
     @media (max-width: 1180px) {
         width: 56px;
-        top: 424px;
+        top: 420px;
         right: 226px;
+    }
+    @media (max-width: 960px) {
+        top: 450px;
+        right: 278px;
+        width: 48px;
+    }
+    @media (max-width: 800px) {
+        top: 72.5%;
+        right: 39%;
+        width: 14%;
     }
 `
 
@@ -297,47 +393,53 @@ const PhoneImg= styled.img`
         width: 80%;
         margin-left: 30px;
     }
+    @media (max-width: 800px) {
+        margin: 0;
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 `
 
 export default function AboutSection ({ theme }) {
 
     const sectionRef = useRef(null)
 
-    const intersection = useIntersection(sectionRef, {
-        root: null,
-        rootMargin: '150px',
-        threshold: 1,
-    })
+    // const intersection = useIntersection(sectionRef, {
+    //     root: null,
+    //     rootMargin: '150px',
+    //     threshold: 1,
+    // })
 
-    const fadeIn = element => {
-        gsap.to(element, 1, {
-            opacity: 1,
-            y: 60,
-            ease: 'power4.out',
-            stagger: {
-                amount: 0.4
-            },
-        })
-    }
+    // const fadeIn = element => {
+    //     gsap.to(element, 1, {
+    //         opacity: 1,
+    //         y: 60,
+    //         ease: 'power4.out',
+    //         stagger: {
+    //             amount: 0.4
+    //         },
+    //     })
+    // }
 
-    const fadeOut = element => {
-        gsap.to(element, 1, {
-            opacity: 0,
-            y: 20,
-            ease: 'power4.out',
-            // stagger: {
-            //     amount: 0.1
-            // },
-        })
-    }
+    // const fadeOut = element => {
+    //     gsap.to(element, 1, {
+    //         opacity: 0,
+    //         y: 20,
+    //         ease: 'power4.out',
+    //         // stagger: {
+    //         //     amount: 0.1
+    //         // },
+    //     })
+    // }
 
-    intersection && intersection.intersectionRatio < 1 ?
-    fadeOut(".fadeIn")
-    :  
-    fadeIn(".fadeIn")
+    // intersection && intersection.intersectionRatio < 1 ?
+    // fadeOut(".fadeIn")
+    // :  
+    // fadeIn(".fadeIn")
 
     const randStreamer = () => {
-        const streamers = ["xqcow", "lirik", "linkus7", "pokelawls", "clintstevens", "sodapoppin", "becca", "emilyywang"]
+        const streamers = ["xqc", "lirik", "linkus7", "pokelawls", "clintstevens", "sodapoppin", "lacari", "extraemily"]
         const n = Math.floor(Math.random() * 8)
         return streamers[n]
     }
@@ -353,11 +455,11 @@ export default function AboutSection ({ theme }) {
         <AboutId className="fadeIn" theme={theme}>Who am I ?</AboutId>
         <AboutHeader className="fadeIn">A Little About Me ✌️</AboutHeader>
         <AboutText className="fadeIn" theme={theme}>
-            Hi! My name is Ben. I am currently a freshman at the University of Maryland studying Computer Science and Economics. I love listening to podcasts (my favorites are the All In Podcast, the Lex Fridman Podcast, and This Week in Startups), listening to music (Kanye, Jaden Smith, Boy Pablo, Still Woozy), photography, Twitch, and creating websites like this!
+            Hi! My name is Ben. I am currently a freshman at the University of Maryland studying Computer Science and Robotics. I love listening to podcasts (my favorites are the All In Podcast, the Lex Fridman Podcast, and This Week in Startups), listening to music (Kanye, Jaden Smith, Tame Impala, TWICE), photography, Twitch, and creating websites like this!
         </AboutText>
         <AboutText className="fadeIn" theme={theme}>
             {/*className="fadeIn"</TextContainer>*/}
-            I am super interested in all things technology and innovation. I am always up for a long conversation about web development, iOS development, UI/UX design, DeFi, venture capital, synthetic biology, or climate tech. More information on what im currently working on can be found <TextLink href="https://www.linkedin.com/in/bendimarco/" target="_blank">here</TextLink>.
+            I am super interested in all things technology and innovation. I am always up for a long conversation about UI/UX design, XR, DeFi, venture capital, synthetic biology, or climate tech. More information on what im currently working on can be found <TextLink theme={theme} href="https://www.linkedin.com/in/bendimarco/" target="_blank"> <i>on my linkedin</i></TextLink>.
             </AboutText>
         </TextContainer>
         <PhoneContainer>
@@ -369,8 +471,7 @@ export default function AboutSection ({ theme }) {
                         <a href="https://www.youtube.com/channel/UCESLZhusAkFfsNsApnjF_Cg" target="_blank">
                             <TylerImg src={Tyler}></TylerImg>
                         </a>
-                        {/* <a href="https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb" target="_blank"> */}
-                        <a href="https://open.spotify.com/artist/7wbkl3zgDZEoZer357mVIw" target="_blank">
+                        <a href="https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb" target="_blank">
                             <KevinImg src={Kevin}></KevinImg>
                         </a>
                         <a href="https://www.instagram.com/bendimar.co/" target="_blank">

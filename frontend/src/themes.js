@@ -10,14 +10,16 @@ const LightTheme = {
     primaryBackgroundColor: "#FFFFFF",
     aboutIdColor: "#CDCDE3",
     pTextColor: "#494B64",
+    pBrightColor: "#0E0F20",
   
     viewMoreBtnColor: "#CDCDE3",
-    viewMoreBtnHoverColor: "#A5ACD9",
+    viewMoreBtnHoverColor: "#484B64",
     projectIconColor: "#DADDED",
-    projectIconHoverColor: "#A5ACD9",
+    projectIconHoverColor: "#484B64",
     constructionTextColor: "#494B6433",
+    toolsColor: "#BBBBC9",
   
-    copyrightTextColor: "#494B64688",
+    copyrightTextColor: "#454A68",
     madeWithTextColor: "#757796ee",
 
     transition: " 0.0s ease-in-out",
@@ -34,13 +36,15 @@ const LightTheme = {
   
     primaryBackgroundColor: "#121212",
     aboutIdColor: "#2E2F3F",
-    pTextColor: "#9699AFdd",
+    pTextColor: "#E4E6F2",
+    pBrightColor: "#0E0F20",
   
     viewMoreBtnColor: "#373743",
-    viewMoreBtnHoverColor: "#51525F",
+    viewMoreBtnHoverColor: "#838799",
     projectIconColor: "#373743",
-    projectIconHoverColor: "#51525F",
+    projectIconHoverColor: "#838799",
     constructionTextColor: "#494B6477",
+    toolsColor: "#38394A",
   
     copyrightTextColor: "#65687A",
     madeWithTextColor: "#494B64cc",
